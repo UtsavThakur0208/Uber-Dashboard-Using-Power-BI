@@ -1,150 +1,193 @@
-# Uber Data Analytics Dashboard
+# 🚖 Uber Data Analytics Dashboard
 
-A comprehensive data visualization dashboard for analyzing Uber ride-sharing business metrics and performance indicators for the year 2024.
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow)
+![Data Analytics](https://img.shields.io/badge/Data-Analytics-blue)
+![Business Intelligence](https://img.shields.io/badge/Business-Intelligence-green)
+![Project Status](https://img.shields.io/badge/Status-Completed-success)
 
-## 📊 Dashboard Overview
+## 📌 Project Overview
 
-This interactive dashboard provides insights into various aspects of Uber's ride-sharing operations, including booking patterns, vehicle performance, revenue analysis, cancellation trends, and rating distributions.
+This project presents a comprehensive **Uber Data Analytics Dashboard** built using **Power BI** to analyze ride-sharing business operations and customer behavior.
 
-### Key Metrics Summary (2024)
-- **Total Bookings**: 148.77K
-- **Success Rate**: 65.96% (93K completed rides)
-- **Cancellation Rate**: 25% (37.43K cancelled bookings)
-- **Customer Cancellations**: 19.15% (27K)
-- **Driver Cancellations**: 7.45% (10.5K)
+The dashboard provides insights into:
 
+* Booking trends
+* Revenue analysis
+* Cancellation patterns
+* Vehicle performance
+* Customer & driver ratings
+* Payment methods
+* Operational KPIs
 
-## ❓ Power BI Questions Solved
+The goal of this project is to transform raw ride-booking data into actionable business insights that can support operational efficiency and strategic decision-making.
 
-This comprehensive dashboard is organized into 5 strategic view segments, each addressing specific business analytics questions:
+---
 
-### 1. 📊 Overall Performance View
-- **Ride Volume Over Time** - Time-series chart tracking daily/weekly ride patterns to identify seasonal trends and demand fluctuations
-- **Booking Status Breakdown** - Pie/doughnut chart displaying proportions of completed, cancelled by customer, cancelled by driver, and other booking statuses
+# 🎯 Business Problem
 
-### 2. 🚗 Vehicle Type Analysis View  
-- **Top 5 Vehicle Types by Ride Distance** - Table chart ranking vehicle types (Go Mini, Go Sedan, Auto, eBike/Bike, UberXL, Premier Sedan) based on total distance covered
+Ride-sharing platforms generate massive volumes of operational and customer data daily. Understanding booking patterns, cancellations, customer satisfaction, and revenue streams is critical for improving business performance.
 
-### 3. 💰 Revenue Analytics View
-- **Revenue by Payment Method** - Stacked bar chart breaking down revenue streams across payment channels (UPI, Cash, Credit Cards, Uber Wallet, Debit Card)
-- **Top 5 Customers by Total Booking Value** - Leaderboard visualization identifying high-value customers and their spending patterns
-- **Ride Distance Distribution Per Day** - Histogram plot revealing daily operational coverage patterns and distance distribution insights
+This dashboard helps stakeholders:
 
-### 4. 🚫 Cancellation Intelligence View
-- **Cancelled Rides Reasons (Customer)** - Pie chart analysis examining customer-initiated cancellation drivers (Wrong Address, Change of Plans, Driver Issues, App Problems)
-- **Cancelled Rides Reasons (Driver)** - Pie chart breakdown of driver-initiated cancellations (Customer Related Issues, Personal & Car Issues, Capacity Constraints)
+* Monitor operational KPIs
+* Identify cancellation causes
+* Analyze customer behavior
+* Evaluate vehicle performance
+* Improve customer satisfaction
 
-### 5. ⭐ Rating & Quality Assessment View
-- **Driver Ratings Distribution** - Card-based visualization displaying average driver ratings (4.23-4.24) across all vehicle types for easy comparison
-- **Customer Ratings Analysis** - Card layout showcasing customer satisfaction ratings (4.40-4.41) across vehicle categories, enabling quality benchmarking
+---
 
+# 🛠️ Tech Stack
 
-## 🚗 Vehicle Fleet Analysis
+* Power BI
+* Power Query
+* DAX (Data Analysis Expressions)
+* Data Visualization
+* Business Intelligence
+* Data Analytics
+* CSV Dataset
 
-| Vehicle Type | Total Bookings | Success Bookings | Avg Distance | Total Distance |
-|--------------|----------------|------------------|---------------|----------------|
-| Go Mini      | 10.34M         | 9.41M           | 25.99 km      | 482K km        |
-| Go Sedan     | 9.37M          | 8.54M           | 25.98 km      | 433K km        |
-| Auto         | 12.88M         | 11.73M          | 25.99 km      | 602K km        |
-| eBike/Bike   | 11.46M         | 10.44M          | 26.11 km      | 537K km        |
-| UberXL       | 1.53M          | 1.41M           | 25.72 km      | 72K km         |
-| Premier Sedan| 6.28M          | 5.73M           | 25.95 km      | 292K km        |
+---
 
+# 📂 Dataset Information
 
-## 📈 Dashboard Views & Features
+The dataset contains ride-booking information including:
 
-### 1. Overall Performance
-- **Ride Volume Over Time**: Monthly trend analysis showing seasonal patterns
-- **Booking Status Breakdown**: Pie chart visualization of booking outcomes
-- Peak performance observed in July-August period
-- Notable dip in February followed by steady growth
+* Booking ID
+* Booking Status
+* Customer ID
+* Vehicle Type
+* Pickup & Drop Locations
+* Ride Distance
+* Booking Value
+* Payment Method
+* Customer Ratings
+* Driver Ratings
+* Cancellation Reasons
 
-### 2. Vehicle Type Analysis
-- Comprehensive breakdown of all vehicle categories
-- Performance metrics by vehicle type
-- Distance and booking value analysis
-- Auto rickshaws leading in total bookings (12.88M)
+Dataset File:
 
-### 3. Revenue Analytics
-- **Revenue by Payment Method**: 
-  - UPI: Highest revenue contributor (~2.0M)
-  - Cash: Second highest (~1.1M)
-  - Uber Wallet, Credit Card, Debit Card: Lower contributions
-- **Top 5 Customers**: High-value customer identification
-- **Daily Distance Distribution**: Consistent 6K-8K km range per day
-
-### 4. Cancellation Analysis
-#### Customer Cancellations (10.6K total)
-- Wrong Address: 22.5% (2.36K)
-- Change of Plans: 21.86% (2.3K)
-- Driver Issues: 22.41% (2.35K)
-- Driver Not Moving: 22.24% (2.34K)
-- App Issues: 11% (1.16K)
-
-#### Driver Cancellations (28K total)
-- Customer Related Issues: 25.32% (7K)
-- Customer Behavior: 24.76% (7K)
-- Personal & Car Issues: 24.91% (7K)
-- Capacity Issues: 25% (7K)
-
-### 5. Rating System
-#### Customer Ratings by Vehicle Type
-- Consistent high ratings across all vehicle types: 4.40-4.41
-- Go Sedan leading with 4.41 rating
-- All other categories maintaining 4.40 rating
-
-#### Driver Ratings by Vehicle Type
-- Slightly lower than customer ratings: 4.23-4.24
-- UberXL showing marginally higher driver satisfaction (4.24)
-- Consistent performance across all vehicle categories
-
-
-## 🔧 Data Schema
-
-The dashboard is built using the following data columns:
-
-```
-- Date, Time
-- Booking ID, Booking Status
-- Customer ID, Vehicle Type
-- Pickup Location, Drop Location
-- Avg VTAT, Avg CTAT
-- Cancelled Rides by Customer, Reason for cancelling by Customer
-- Cancelled Rides by Driver, Driver Cancellation Reason
-- Incomplete Rides, Incomplete Rides Reason
-- Booking Value, Ride Distance
-- Driver Ratings, Customer Rating
-- Payment Method
+```txt
+ncr_ride_bookings.csv
 ```
 
+---
 
-## 📊 Key Visualizations
+# 📊 Dashboard Features
 
-1. **Time Series Analysis**: Monthly ride volume trends
-2. **Pie Charts**: Booking status and cancellation reason distributions
-3. **Bar Charts**: Revenue by payment method, top customers
-4. **Tables**: Vehicle type performance metrics
-5. **Histograms**: Daily distance distribution patterns
+## 1️⃣ Overall Performance Analysis
 
+* Ride volume trends over time
+* Booking success and cancellation analysis
+* Operational performance monitoring
 
+## 2️⃣ Vehicle Type Analysis
 
-## 🎯 Business Insights
+* Top-performing vehicle categories
+* Distance coverage analysis
+* Booking distribution by vehicle type
 
-### Strengths
-- Strong customer satisfaction (4.40+ ratings)
-- Diverse vehicle portfolio catering to different needs
-- UPI adoption driving digital payments
-- Consistent daily operations (6K-8K km coverage)
+## 3️⃣ Revenue Analytics
 
-### Areas for Improvement
-- 25% cancellation rate needs attention
-- Driver satisfaction slightly lower than customer satisfaction
-- Seasonal variations in ride volume
-- Customer retention strategies for top spenders
+* Revenue by payment method
+* Top customers by booking value
+* Daily ride distance trends
 
-<!-- 
-<h2></h2>
-<div align="center">
-<strong>Thank you for exploring this dashboard! </strong>
-<h3>If this project helped you, please consider giving it a ⭐️</h3>
-</div> -->
+## 4️⃣ Cancellation Analysis
+
+* Customer cancellation reasons
+* Driver cancellation reasons
+* Operational bottleneck identification
+
+## 5️⃣ Rating & Quality Analysis
+
+* Customer satisfaction analysis
+* Driver rating distribution
+* Service quality comparison across vehicle types
+
+---
+
+# 📈 Key KPIs
+
+| KPI                    | Value   |
+| ---------------------- | ------- |
+| Total Bookings         | 148.77K |
+| Completed Rides        | 93K     |
+| Success Rate           | 65.96%  |
+| Cancellation Rate      | 25%     |
+| Customer Cancellations | 19.15%  |
+| Driver Cancellations   | 7.45%   |
+
+---
+
+# 📷 Dashboard Preview
+
+![Dashboard Demo](Dashboard.gif)
+
+---
+
+# 🔍 Key Business Insights
+
+* UPI emerged as the most preferred payment method.
+* Auto rides recorded the highest booking volume.
+* Customer satisfaction ratings remained consistently high.
+* Cancellation rate highlighted operational inefficiencies.
+* Customer-related and driver-related issues contributed significantly to ride cancellations.
+* Seasonal trends affected ride demand across different periods.
+
+---
+
+# 🚀 Skills Demonstrated
+
+* Data Cleaning & Transformation
+* Interactive Dashboard Development
+* KPI Monitoring
+* Business Intelligence
+* Data Storytelling
+* Data Visualization
+* Analytical Thinking
+* Business Insight Extraction
+
+---
+
+# 📁 Project Structure
+
+```txt
+Uber-Data-Analytics-Dashboard/
+│
+├── Dashboard.gif
+├── README.md
+├── Uber.pbix
+└── ncr_ride_bookings.csv
+```
+
+---
+
+# ▶️ How to Use
+
+1. Download the repository
+2. Open `Uber.pbix` in Power BI Desktop
+3. Explore interactive dashboard views
+4. Analyze KPIs and business insights
+
+---
+
+# 📌 Future Improvements
+
+* Real-time dashboard integration
+* Advanced DAX measures
+* Predictive analytics for ride demand forecasting
+* Deployment using Power BI Service
+* Integration with cloud databases
+
+---
+
+# 📬 Author
+
+**Utsav Thakur**
+B.Sc. Computer Science (Data Science) Student
+Aspiring Data Analyst & Machine Learning Enthusiast
+
+---
+
+⭐ If you found this project useful, consider giving it a star!
